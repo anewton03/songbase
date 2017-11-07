@@ -8,7 +8,7 @@ def index():
 
 @app.route('/user/<string:name>/')
 def get_user(name):
-    return 'hello %s' % (name)
+    return 'hello %s your age is %d' % (name, 21)
 
 
 @app.route('/users')
@@ -17,4 +17,4 @@ def show_all_users():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=2000)
