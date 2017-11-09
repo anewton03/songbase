@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Songbase</title>
+  </head>
+  <body>
+    {# this is the jinja comment #}
+    {% if user_name == "alexis" %}
+      <h1>Hello, student!</h1>
+    {% else %}
+      <h1>Hello, {{user_name}}</h1>
+    {% endif %}
+  </body>
+</html>
