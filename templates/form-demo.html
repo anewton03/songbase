@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Form Demo
+{% endblock %}
+{% block page_content %}
+    <h1>This is the form demo page</h1>
+    <h1>Hello,
+      {% if first_name %}
+        {{first_name}}
+      {% else %}
+        Stranger
+      {% endif %}
+    </h1>
+
+  <h3>this is a get form</h3>
+
+    <form action="/form-demo" method="get">
+        What is your name <br>
+        <input type="text" name="first_name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+  <h3>this is a post form</h3>
+
+    <form action="/form-demo" method="post">
+        What is your name <br>
+        <input type="text" name="first_name">
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
